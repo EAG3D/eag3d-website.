@@ -1,5 +1,5 @@
 ---
-title: "Elite Carbine Moderator "
+title: "Elite Hexagon Pattern Carbine Moderator "
 price: $35.00
 description: "This is a Hexagon Pattern Solid Body Airgun Moderator. Best suited
   for carbine size airguns for the most effectiveness. Multiple colors available
