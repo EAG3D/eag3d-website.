@@ -1,0 +1,30 @@
+
+media:
+  input: media
+  output: /media
+
+content:
+  - name: products
+    label: Products
+    type: collection
+    path: products
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    fields:
+      - name: title
+        label: Product Name
+        type: string
+        required: true
+      - name: price
+        label: Price
+        type: string
+      - name: description
+        label: Description
+        type: text
+      - name: image
+        label: Product Photo
+        type: image
+      - name: featured
+        label: Featured Product
+        type: boolean
+        
