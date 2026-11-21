@@ -165,13 +165,46 @@ async function loadProducts() {
         description.textContent = product.description;
         details.appendChild(description);
       }
-const orderButton = document.createElement("a");
+const orderButton = document.createElement("button");
 orderButton.className = "order-button";
 orderButton.textContent = "CONTACT TO ORDER";
-orderButton.href = "mailto:eliteairgunneryt@protonmail.com?subject=" +
+orderButton.type = "button";
+orderButton.style.border = "0";
+orderButton.style.cursor = "pointer";
+orderButton.style.fontSize = "16px";
+orderButton.style.fontFamily = "inherit";
+
+const options = document.createElement("div");
+options.hidden = true;
+options.style.marginTop = "10px";
+
+const callLink = document.createElement("a");
+callLink.href = "tel:+15743347562";
+callLink.textContent = "CALL: (574) 334-7562";
+
+const emailLink = document.createElement("a");
+emailLink.href = "mailto:eliteairgunneryt@protonmail.com?subject=" +
   encodeURIComponent("Order Inquiry: " + (product.title || "Product"));
+emailLink.textContent = "EMAIL EAG3D";
+
+for (const link of [callLink, emailLink]) {
+  link.style.display = "block";
+  link.style.padding = "12px";
+  link.style.marginTop = "8px";
+  link.style.background = "#292929";
+  link.style.borderRadius = "5px";
+  link.style.textDecoration = "none";
+}
+
+options.appendChild(callLink);
+options.appendChild(emailLink);
+
+orderButton.addEventListener("click", () => {
+  options.hidden = !options.hidden;
+});
+
 details.appendChild(orderButton);
-      card.appendChild(details);
+details.appendChild(options);
       container.appendChild(card);
     }
 
