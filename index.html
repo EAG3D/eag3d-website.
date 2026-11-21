@@ -165,7 +165,12 @@ async function loadProducts() {
         description.textContent = product.description;
         details.appendChild(description);
       }
-
+const orderButton = document.createElement("a");
+orderButton.className = "order-button";
+orderButton.textContent = "CONTACT TO ORDER";
+orderButton.href = "mailto:eliteairgunneryt@protonmail.com?subject=" +
+  encodeURIComponent("Order Inquiry: " + (product.title || "Product"));
+details.appendChild(orderButton);
       card.appendChild(details);
       container.appendChild(card);
     }
