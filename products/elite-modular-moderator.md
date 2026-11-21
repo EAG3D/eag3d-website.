@@ -8,5 +8,5 @@ description: "This is a fully modular airgun moderator that is designed with
   M14X1, M14x1.25, M18X1. Free shipping and Lifetime Warranty. Deals to be had
   on multiple items. "
 image: /media/3847-removebg-preview.png
-featured: false
+featured: true
 ---
