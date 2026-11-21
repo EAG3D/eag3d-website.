@@ -202,7 +202,13 @@ options.appendChild(emailLink);
 orderButton.addEventListener("click", () => {
   options.hidden = !options.hidden;
 });
-
+const paypalLink = document.createElement("a");
+paypalLink.className = "order-button";
+paypalLink.href = "https://www.paypal.me/BennyLo420";
+paypalLink.target = "_blank";
+paypalLink.rel = "noopener noreferrer";
+paypalLink.textContent = "PAY WITH PAYPAL";
+details.appendChild(paypalLink);
 details.appendChild(orderButton);
 details.appendChild(options);
      card.appendChild(details); container.appendChild(card);
